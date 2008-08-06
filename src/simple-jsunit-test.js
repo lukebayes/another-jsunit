@@ -110,13 +110,3 @@ var AsyncMultiMethodTest = TestCase.extend({
 		setTimeout(this.addAsync(handler), timeout);
 	}
 });
-
-///////////////////////////////
-// Test Visual Entities
-
-var VisualEntityTest = TestCase.extend({
-	
-	testDocument: function() {
-		
-	}
-});

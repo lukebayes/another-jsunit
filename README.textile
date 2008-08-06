@@ -8,8 +8,9 @@ This is likely a problem with my own comprehension more than a problem with thei
 
 This framework supports testing simple, synchronous features, asynchronous features and even visual components.
 
- The test framework itself is decoupled from any particular JavaScript framework, but I have only created a ResultPrinter for JQuery output. If you're using a different JS framework, you should check out the <code>jquery-printer.js</code> and <code>jquery-printer.css</code> files for examples of how you might implement what you need.
+The test framework itself is decoupled from any particular JavaScript framework, but I have only created a ResultPrinter for JQuery output. If you're using a different JS framework, you should check out the <code>jquery-printer.js</code> and <code>jquery-printer.css</code> files for examples of how you might implement what you need.
 
-This framework was developed over a weekend while working on a Rails application. I'm essentially sharing it because I think code should be shared. If you want changes made, fork, change it and send me a pull request. I'm not planning on creating a community around this because people seem to be satisfied with the existing JUnit.
+This framework was developed over a weekend while working on a Rails application. I'm essentially sharing it because I think code should be shared. 
 
+If you want changes made, fork, change it and send me a pull request. I'm not planning on creating a community around this tool because smart people seem to be satisfied with the existing JUnit.
 

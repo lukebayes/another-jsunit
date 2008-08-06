@@ -1,0 +1,43 @@
+
+body {
+	background-color:#333333;
+	color:#ffffff;
+	margin:0px;
+}
+
+#test-header, #test-successes, #test-summary {
+	padding:10px;
+}
+
+#test-status {
+	float:none;
+	width:100%;
+	height:5px;
+	margin-bottom:10px;
+}
+
+#test-header {
+	font-size:120%;
+	display:inline;
+}
+
+#test-failures {
+	color: #ff0000;
+}
+
+#test-all-tests {
+	margin-top: 20px;
+}
+
+#test-errors {
+	color: #ff0000;
+}
+
+.failed {
+	background-color:#ff0000;
+}
+
+.succeeded {
+	background-color:#00ff00;
+}
+

@@ -14,4 +14,4 @@ This framework was developed over a weekend while working on a Rails application
 
 If you want changes made, fork, change it and send me a pull request. I'm not planning on creating a community around this tool because smart people seem to be satisfied with the existing JUnit.
 
-The <code>simple-jsunit-test.js</code> should provide plenty of examples related to testing simple and asynchronous features. You can also test visual elements by using whatever visual framework you have to modify the DOM and verify the results of your modifications.
+The "<code>simple-jsunit-test.js</code>":http://github.com/lukebayes/simple-jsunit/tree/master/src/simple-jsunit-test.js should provide plenty of examples related to testing simple and asynchronous features. You can also test visual elements by using whatever visual framework you have to modify the DOM and verify the results of your modifications.

@@ -64,6 +64,7 @@
 })();
 
 /////////////////////////////////////
+// Exception that should be thrown by failed assertions
 
 var AssertionFailure = Class.extend({
 	init: function(message) {
@@ -76,6 +77,9 @@ var AssertionFailure = Class.extend({
 });
 
 /////////////////////////////////////
+// Base class for all TestCases
+// TODO: Should add more helpful assertions 
+// to this class.
 
 var Assert = Class.extend({
 	processArguments: function(args, expected) {
@@ -148,7 +152,15 @@ var Assert = Class.extend({
 });
 
 /////////////////////////////////////
-
+// All tests should ultimately
+// extend this base class.
+// 
+// Subclasses of TestCase should end with 'Test'
+// and the following actions will be performed:
+// for each method that begins with 'test', 
+// the setUp function will be called,
+// then the test method,
+// then tearDown.
 var TestCase = Assert.extend({
 	init: function() {
 		this.asyncTimeout = TestCase.DEFAULT_TIMEOUT;
@@ -299,7 +311,13 @@ var TestCase = Assert.extend({
 TestCase.DEFAULT_TIMEOUT = 3000; // In milliseconds
 
 /////////////////////////////////////
-
+// The TestRunner is expected to execute all of your 
+// provided TestCases.
+// it is usually used as follows:
+// var runner = new TestRunner();
+// runner.addTestCase(SomeTest);
+// runner.start();
+//
 var TestRunner = Class.extend({
 	init: function(printer) {
 		this.pendingTests = [];
@@ -337,7 +355,6 @@ var TestRunner = Class.extend({
 // AllTestsRunner, finds any Functions
 // in the global scope that end with 'Test'
 // and runs them as TestCases
-
 var AllTestsRunner = TestRunner.extend({
 
 	init: function(printer) {
@@ -374,7 +391,9 @@ var AllTestsRunner = TestRunner.extend({
 });
 
 /////////////////////////////////////
-
+// TestPrinter should be extended and results
+// should be output using whatever mechanism
+// is used in your context. 
 var TestPrinter = Class.extend( {
 	init: function() {
 		this.currentTest = null;
